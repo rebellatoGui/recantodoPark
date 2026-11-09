@@ -294,7 +294,8 @@
         {
           "title": "Cookies y servicios de terceros",
           "paragraphs": [
-            "Usamos una sola cookie funcional, NEXT_LOCALE, que recuerda el idioma elegido en el sitio. No usamos cookies de publicidad ni herramientas de análisis de visitas.",
+            "Usamos una cookie funcional, NEXT_LOCALE, que recuerda el idioma elegido en el sitio.",
+            "También usamos Google Tag Manager con la etiqueta de Google Ads, que coloca cookies de publicidad para medir los resultados de nuestros anuncios (por ejemplo, saber si una visita vino de un anuncio y terminó en reserva) y para mostrar anuncios de la posada a quienes ya visitaron el sitio. Google trata estos datos según su política de privacidad. Puedes ajustar o desactivar los anuncios personalizados en adssettings.google.com.",
             "El mapa del sitio lo carga Google Maps, que puede usar cookies propias según la política de privacidad de Google. Al abrir los enlaces de WhatsApp o Instagram, se aplican las políticas de esas plataformas."
           ]
         },

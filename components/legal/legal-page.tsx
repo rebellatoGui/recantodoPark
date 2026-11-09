@@ -1,7 +1,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import { contact } from "@/lib/data/pousada";
 
-export const LEGAL_UPDATED_AT = "2026-09-13";
+export const LEGAL_UPDATED_AT = "2026-11-09";
 
 type Section = {
   title: string;

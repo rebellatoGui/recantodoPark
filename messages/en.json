@@ -294,7 +294,8 @@
         {
           "title": "Cookies and third-party services",
           "paragraphs": [
-            "We use a single functional cookie, NEXT_LOCALE, which remembers the language you chose. We do not use advertising cookies or visitor analytics tools.",
+            "We use a functional cookie, NEXT_LOCALE, which remembers the language you chose.",
+            "We also use Google Tag Manager with the Google Ads tag, which sets advertising cookies to measure the results of our ads (for example, whether a visit came from an ad and led to a booking) and to show the inn's ads to people who have visited the website. This data is processed by Google under its privacy policy. You can adjust or turn off personalized ads at adssettings.google.com.",
             "The map on the website is loaded by Google Maps, which may use its own cookies under Google's privacy policy. When you open the WhatsApp or Instagram links, those platforms' policies apply."
           ]
         },
