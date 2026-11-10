@@ -9,7 +9,7 @@ export function SectionBackdrop({
   variant,
   className,
 }: {
-  variant: "sunset" | "topo" | "map" | "park" | "grain" | "coaster";
+  variant: "topo" | "park" | "grain" | "coaster";
   className?: string;
 }) {
   const scope = useRef<HTMLDivElement>(null);
@@ -25,13 +25,7 @@ export function SectionBackdrop({
         scrub: true,
       };
 
-      if (variant === "sunset") {
-        gsap.fromTo(
-          "[data-backdrop-layer]",
-          { backgroundPositionY: "100%" },
-          { backgroundPositionY: "70%", ease: "none", scrollTrigger },
-        );
-      } else if (variant === "coaster") {
+      if (variant === "coaster") {
         gsap.fromTo(
           "[data-coaster-track]",
           { strokeDashoffset: 1 },
@@ -41,7 +35,7 @@ export function SectionBackdrop({
             scrollTrigger: { ...scrollTrigger, end: "center center" },
           },
         );
-      } else if (variant === "map" || variant === "park") {
+      } else if (variant === "park") {
         gsap.fromTo(
           "[data-backdrop-layer]",
           { backgroundPositionY: "42%" },
@@ -67,15 +61,7 @@ export function SectionBackdrop({
         className,
       )}
     >
-      {variant === "sunset" ? (
-        <>
-          <div
-            data-backdrop-layer
-            className="absolute inset-x-0 bottom-0 h-[125%] bg-[url('/brand/bg-sunset.webp')] bg-cover bg-bottom bg-no-repeat opacity-55 dark:opacity-30 dark:brightness-[0.45] dark:saturate-[0.85]"
-          />
-          <div className="absolute inset-0 bg-linear-to-b from-background via-background/60 to-transparent" />
-        </>
-      ) : variant === "park" ? (
+      {variant === "park" ? (
         <>
           <div
             data-backdrop-layer
@@ -83,15 +69,6 @@ export function SectionBackdrop({
           />
           <div className="absolute inset-0 bg-navy/82" />
           <div className="absolute inset-0 bg-linear-to-b from-navy/60 via-transparent to-navy/60" />
-        </>
-      ) : variant === "map" ? (
-        <>
-          <div
-            data-backdrop-layer
-            className="absolute inset-x-0 top-0 h-[120%] scale-105 bg-[url('/photos/google-maps.webp')] bg-cover bg-center blur-[3px]"
-          />
-          <div className="absolute inset-0 bg-navy/88" />
-          <div className="absolute inset-0 bg-radial-[ellipse_70%_60%_at_50%_0%] from-gold/10 to-transparent to-70%" />
         </>
       ) : variant === "grain" ? (
         <div className="absolute inset-0 bg-grain opacity-[0.1] mix-blend-multiply dark:opacity-[0.08] dark:mix-blend-screen" />

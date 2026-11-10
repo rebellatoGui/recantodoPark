@@ -2,7 +2,6 @@ import type { FullConfig } from "@playwright/test";
 
 const PAGES = [
   "/",
-  "/acomodacoes",
   "/acomodacoes/suite-01",
   "/ingressos-beto-carrero",
   "/politica-de-privacidade",

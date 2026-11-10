@@ -12,8 +12,15 @@ export const photos = {
   oMar: "/photos/o-mar.webp",
   estacionamento: "/photos/estacionamento.webp",
   quarto1: "/photos/quarto1.webp",
-  quarto2: "/photos/quarto2.webp",
   banheiro1: "/photos/banheiro1.webp",
+  quartoJanela: "/photos/quarto-janela.webp",
+  quartoTriplo: "/photos/quarto-triplo.webp",
+  quartoLilas: "/photos/quarto-lilas.webp",
+  fachadaNoite: "/photos/fachada-noite.webp",
+  cafeBuffet: "/photos/cafe-buffet.webp",
+  cafeBancada: "/photos/cafe-bancada.webp",
+  refeitorio: "/photos/refeitorio.webp",
+  refeitorioMesas: "/photos/refeitorio-mesas.webp",
   droneGravataPoster: "/photos/drone-gravata-poster.webp",
   droneGravata2Poster: "/photos/drone-gravata-2-poster.webp",
 } as const;
@@ -42,7 +49,6 @@ export const videos = {
 };
 
 export const amenityStock = {
-  breakfast: unsplash("1504754524776-8f4f37790ca0", 600, 600),
   ac: unsplash("1762341123870-d706f257a12e", 600, 600),
   minibar: unsplash("1540961403310-79825242906e", 600, 600),
   wifi: unsplash("1453928582365-b6ad33cbcf64", 600, 600),

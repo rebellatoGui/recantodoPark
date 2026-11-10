@@ -42,7 +42,7 @@ export function TicketsBuildDay() {
               size="lg"
             />
             <Button
-              render={<Link href="/acomodacoes" />}
+              render={<Link href="/acomodacoes/suite-01" />}
               nativeButton={false}
               variant="outline"
               size="lg"

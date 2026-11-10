@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Clock, Mail, MapPin, PawPrint } from "lucide-react";
 import type { ComponentType, ReactNode } from "react";
@@ -61,10 +60,10 @@ export function SiteFooter() {
 
   const navLinks = [
     { href: "/", label: tNav("home"), hash: false },
-    { href: "/acomodacoes", label: tNav("accommodations"), hash: false },
+    { href: "/acomodacoes/suite-01", label: tNav("accommodations"), hash: false },
     { href: "/ingressos-beto-carrero", label: tNav("tickets"), hash: false },
-    { href: "/#servicos", label: tNav("amenities"), hash: true },
     { href: "/#maps", label: tNav("location"), hash: true },
+    { href: "/#servicos", label: tNav("amenities"), hash: true },
   ];
 
   const stayInfo = [
@@ -80,31 +79,11 @@ export function SiteFooter() {
       id="contato"
       className="border-t border-white/10 bg-navy text-navy-foreground"
     >
-      <div className="mx-auto max-w-7xl px-6 pt-14 pb-28 sm:pb-10 md:pt-20">
-        <div className="grid gap-x-8 gap-y-10 sm:grid-cols-6 sm:gap-y-12 lg:grid-cols-12">
-          <div className="sm:col-span-6 lg:col-span-4">
-            <Link
-              href="/"
-              aria-label="Pousada Recanto do Park"
-              className="inline-block transition-opacity hover:opacity-80"
-            >
-              <Image
-                src="/brand/logo.png"
-                alt="Pousada Recanto do Park"
-                width={1391}
-                height={876}
-                className="h-auto w-36 sm:w-44"
-                sizes="176px"
-              />
-            </Link>
-            <p className="mt-6 max-w-sm text-sm leading-relaxed text-navy-foreground/70">
-              {tFooter("description")}
-            </p>
-          </div>
-
-          <nav aria-label={tFooter("navTitle")} className="sm:col-span-2 lg:col-span-2">
+      <div className="mx-auto max-w-7xl px-6 pt-14 pb-28 sm:pb-10 md:pt-16">
+        <div className="grid gap-x-8 gap-y-10 sm:grid-cols-3 sm:gap-y-12 lg:gap-x-16">
+          <nav aria-label={tFooter("navTitle")}>
             <ColumnTitle>{tFooter("navTitle")}</ColumnTitle>
-            <ul className="mt-3 grid grid-cols-2 gap-x-6 text-sm text-navy-foreground/70 sm:grid-cols-1 lg:mt-4">
+            <ul className="mt-3 grid text-sm text-navy-foreground/70 sm:grid-cols-1 lg:mt-4">
               {navLinks.map(({ href, label, hash }) => (
                 <li key={href}>
                   {hash ? (
@@ -121,7 +100,7 @@ export function SiteFooter() {
             </ul>
           </nav>
 
-          <div className="sm:col-span-2 lg:col-span-3">
+          <div>
             <ColumnTitle>{tContact("title")}</ColumnTitle>
             <ul className="mt-3 text-sm text-navy-foreground/70 lg:mt-4">
               <ContactItem href={whatsappLink()} Icon={WhatsappIcon}>
@@ -143,7 +122,7 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          <div className="sm:col-span-2 lg:col-span-3">
+          <div>
             <ColumnTitle>{tFooter("stayTitle")}</ColumnTitle>
             <ul className="mt-3 text-sm text-navy-foreground/70 lg:mt-4">
               {stayInfo.map(({ Icon, text }) => (

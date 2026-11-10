@@ -5,6 +5,14 @@ import { useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { prefersReducedMotion } from "@/lib/animations/reduced-motion";
 
+function cardStep(track: HTMLElement) {
+  const card = track.firstElementChild as HTMLElement | null;
+  if (!card) return track.clientWidth;
+  return (
+    card.offsetWidth + parseFloat(getComputedStyle(track).columnGap || "0")
+  );
+}
+
 export function PhotoCarousel({
   photos,
   autoPlayMs = 3800,
@@ -18,7 +26,7 @@ export function PhotoCarousel({
   const scrollByCards = (dir: 1 | -1) => {
     const track = trackRef.current;
     if (!track) return;
-    track.scrollBy({ left: dir * track.clientWidth * 0.8, behavior: "smooth" });
+    track.scrollBy({ left: dir * cardStep(track), behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -38,7 +46,7 @@ export function PhotoCarousel({
       const atEnd =
         track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
       track.scrollTo({
-        left: atEnd ? 0 : track.scrollLeft + track.clientWidth * 0.8,
+        left: atEnd ? 0 : track.scrollLeft + cardStep(track),
         behavior: "smooth",
       });
     }, autoPlayMs);
@@ -54,22 +62,22 @@ export function PhotoCarousel({
   }, [autoPlayMs]);
 
   return (
-    <div className="relative">
+    <div className="relative sm:px-14">
       <div
         ref={trackRef}
-        className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 scrollbar-none [&::-webkit-scrollbar]:hidden"
+        className="flex snap-x snap-mandatory gap-4 overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden"
       >
         {photos.map((photo) => (
           <div
             key={photo.src}
-            className="relative aspect-4/3 w-[78%] shrink-0 snap-start overflow-hidden rounded-3xl sm:w-[46%] lg:w-[38%]"
+            className="relative aspect-4/3 w-[82%] shrink-0 snap-start overflow-hidden rounded-3xl sm:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-2rem)/3)]"
           >
             <Image
               src={photo.src}
               alt={photo.alt}
               fill
               className="object-cover"
-              sizes="(min-width: 1024px) 38vw, (min-width: 640px) 46vw, 78vw"
+              sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 82vw"
             />
           </div>
         ))}
@@ -79,7 +87,7 @@ export function PhotoCarousel({
         type="button"
         onClick={() => scrollByCards(-1)}
         aria-label="Foto anterior"
-        className="absolute -left-3 top-1/2 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-navy shadow-lg transition-transform hover:scale-105 sm:flex"
+        className="absolute left-0 top-1/2 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-navy shadow-lg transition-transform hover:scale-105 sm:flex"
       >
         <ChevronLeft className="size-5" />
       </button>
@@ -87,7 +95,7 @@ export function PhotoCarousel({
         type="button"
         onClick={() => scrollByCards(1)}
         aria-label="Próxima foto"
-        className="absolute -right-3 top-1/2 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-navy shadow-lg transition-transform hover:scale-105 sm:flex"
+        className="absolute right-0 top-1/2 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-navy shadow-lg transition-transform hover:scale-105 sm:flex"
       >
         <ChevronRight className="size-5" />
       </button>

@@ -1,4 +1,4 @@
-import { contact, googleRating } from "@/lib/data/pousada";
+import { contact } from "@/lib/data/pousada";
 import { ogImage, siteUrl } from "@/lib/seo/site";
 
 export function LodgingJsonLd() {
@@ -27,14 +27,7 @@ export function LodgingJsonLd() {
     hasMap: contact.googleMapsUrl,
     email: contact.email,
     telephone: contact.phoneDisplay,
-    numberOfRooms: 16,
     petsAllowed: true,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: googleRating.value,
-      reviewCount: googleRating.count,
-      bestRating: 5,
-    },
     sameAs: [contact.instagramUrl],
   };
 

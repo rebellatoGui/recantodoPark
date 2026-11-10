@@ -6,7 +6,7 @@ export function SectionWave({
   className,
 }: {
   position: "top" | "bottom";
-  surface: "background" | "surface-cream" | "surface-clay";
+  surface: "background" | "surface-cream" | "surface-clay" | "navy";
   className?: string;
 }) {
   return (
@@ -17,7 +17,7 @@ export function SectionWave({
       style={{ color: `var(--${surface})` }}
       className={cn(
         "pointer-events-none absolute inset-x-0 z-10 h-10 w-full sm:h-16 md:h-20",
-        position === "top" ? "top-0" : "bottom-0 rotate-180",
+        position === "top" ? "-top-px" : "-bottom-px rotate-180",
         className
       )}
     >

@@ -8,8 +8,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
-  --font-display: var(--font-bricolage);
-  --font-heading: var(--font-bricolage);
+  --font-display: var(--font-archivo);
+  --font-heading: var(--font-archivo);
   --color-surface-cream: var(--surface-cream);
   --color-surface-clay: var(--surface-clay);
   --color-navy: var(--navy);
@@ -149,19 +149,20 @@
     @apply font-sans;
   }
   .font-display {
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: -0.02em;
-    font-variation-settings: "wdth" 92;
+    font-variation-settings: "wdth" 112;
   }
 }
 
 @utility heading-section {
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(2.1rem, 1.35rem + 3.2vw, 4rem);
-  line-height: 1.02;
-  letter-spacing: -0.02em;
-  font-variation-settings: "wdth" 88;
+  font-weight: 700;
+  font-size: clamp(1.75rem, 1.1rem + 2.8vw, 3.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  font-variation-settings: "wdth" 125;
   text-wrap: balance;
 }
 
@@ -231,14 +232,6 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .hero-intro [data-hero-glow] {
-    opacity: 0;
-    transform: scale(0.4);
-  }
-  .hero-intro [data-hero-seal] {
-    opacity: 0;
-    transform: translateY(16px) scale(0.85);
-  }
   .hero-intro [data-hero-eyebrow],
   .hero-intro [data-hero-subtitle],
   .hero-intro [data-hero-cta] {
@@ -251,7 +244,7 @@
   /* Salvaguarda para JS com erro (sem JS, o <noscript> do hero já revela tudo). Fica
      bem depois de qualquer entrada terminar, até em aparelho lento, para nunca cortar
      a animação no meio. */
-  .hero-intro :is([data-hero-glow], [data-hero-seal], [data-hero-eyebrow], [data-hero-subtitle], [data-hero-cta], [data-hero-word]) {
+  .hero-intro :is([data-hero-eyebrow], [data-hero-subtitle], [data-hero-cta], [data-hero-word]) {
     animation: hero-failsafe 0.6s ease-out 10s forwards;
   }
 }

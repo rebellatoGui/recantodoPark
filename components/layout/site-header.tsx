@@ -38,10 +38,10 @@ export function SiteHeader() {
 
   const links = [
     { href: "/", label: t("home") },
-    { href: "/acomodacoes", label: t("accommodations") },
+    { href: "/acomodacoes/suite-01", label: t("accommodations") },
     { href: "/ingressos-beto-carrero", label: t("tickets") },
-    { href: "/#servicos", label: t("amenities") },
     { href: "/#maps", label: t("location") },
+    { href: "/#servicos", label: t("amenities") },
     { href: "/#contato", label: t("contact") },
   ];
 

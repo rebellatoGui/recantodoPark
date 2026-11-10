@@ -3,8 +3,6 @@
     "siteName": "Pousada Recanto do Park",
     "titleHome": "Pousada Recanto do Park | Penha, Santa Catarina",
     "descriptionHome": "Guesthouse in Penha, Brazil, five minutes from Beto Carrero World and close to Gravatá Beach. Book your stay.",
-    "titleAccommodations": "Rooms | Pousada Recanto do Park",
-    "descriptionAccommodations": "Discover the rooms and suites at Pousada Recanto do Park, in Penha, Brazil.",
     "titleTickets": "Beto Carrero World Tickets | Pousada Recanto do Park",
     "descriptionTickets": "Buy your Beto Carrero World tickets directly from Pousada Recanto do Park, in Penha, Brazil, five minutes from the park."
   },
@@ -19,24 +17,21 @@
   },
   "hero": {
     "eyebrow": "Penha, Santa Catarina",
-    "title": "Your retreat between the park and the sea",
+    "title": "Your retreat|between\nthe|park|and the sea!",
     "subtitle": "Five minutes from Beto Carrero World and steps from Gravatá Beach. Comfort for the whole family.",
     "ctaPrimary": "Book now",
     "ctaWhatsapp": "Chat on WhatsApp",
     "videoLabel": "Aerial view of Beto Carrero World, a few minutes from the guesthouse"
   },
   "essentialInfo": {
-    "eyebrow": "Essential information",
-    "title": "What to know before you arrive",
-    "subtitle": "A quick summary to help you plan your trip to Pousada Recanto do Park.",
     "receptionLabel": "Front desk",
     "petLabel": "Pet-Friendly",
     "petValue": "Please ask in advance"
   },
   "about": {
     "eyebrow": "About us",
-    "title": "Rest and adventure, side by side",
-    "body": "Pousada Recanto do Park is five minutes from Beto Carrero World and close to Gravatá Beach. The suites are comfortable, there's breakfast and on-site parking, and the people at the front desk know the area well.",
+    "title": "Side by side",
+    "body": "Beto Carrero World and Gravatá Beach are just minutes apart, and the inn sits right in between. Mornings at the park, afternoons by the sea. Back home, a comfortable suite, a generous breakfast and on-site parking.",
     "stats": {
       "distanceValue": "5 min",
       "distanceLabel": "From Beto Carrero World"
@@ -54,7 +49,8 @@
     "beachDescription": "Rocky headlands, open sea and wide sand. The beach is pet-friendly, so your dog can come along.",
     "carouselTitle": "The beach that awaits you",
     "carouselSubtitle": "A glimpse of what you'll find near the pousada, at Gravatá Beach.",
-    "parkLink": "Buy tickets through the guesthouse"
+    "parkLink": "Buy tickets through the guesthouse",
+    "beachLink": "See the beach on the map"
   },
   "amenities": {
     "eyebrow": "Services",
@@ -75,24 +71,42 @@
   "accommodationsPreview": {
     "eyebrow": "Where you'll stay",
     "title": "Comfort for your trip",
-    "ctaAll": "Accommodations"
+    "text": "Bright, airy rooms, a generous breakfast every morning and a dining room facing the garden. Everything designed so you can rest between a day at the park and a day at the beach.",
+    "ctaAll": "See accommodations",
+    "prev": "Previous photo",
+    "next": "Next photo",
+    "photos": {
+      "quarto1": "Suite with a double bed",
+      "quartoJanela": "Room with a hillside view",
+      "quartoTriplo": "Room for the whole family",
+      "quartoLilas": "Double and single bed in one room",
+      "banheiro": "Private bathroom",
+      "cafeBancada": "Buffet with fruit, bread and cakes",
+      "refeitorioMesas": "Dining room facing the garden",
+      "refeitorio": "Plenty of space for meals"
+    }
   },
   "accommodations": {
-    "hero": {
-      "eyebrow": "Our rooms",
-      "title": "Comfort designed for your stay",
-      "subtitle": "Suites with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi, just minutes from Beto Carrero World."
-    },
     "bookRoom": "Book this room",
     "capacityLabel": "Guests",
-    "roomLabel": "Bedroom",
     "detail": {
-      "backToRooms": "Back to rooms",
+      "backToRooms": "Back to home",
       "sizeLabel": "Size",
       "bedsLabel": "Beds",
       "amenitiesLabel": "What this room offers",
       "galleryHint": "Tap the photo to zoom in",
-      "nearbyTitle": "Minutes from everything"
+      "bookEyebrow": "Book directly with the inn",
+      "breakfast": {
+        "badge": "Included in your stay",
+        "title": "Breakfast included",
+        "text": "Every morning, a buffet with fruit, bread, cakes, juices and coffee, served in the dining room facing the garden. Just come downstairs and start the day with energy before the park or the beach.",
+        "photos": {
+          "buffet": "Breakfast buffet with fruit, cakes and juices",
+          "tables": "Dining tables set for breakfast",
+          "counter": "Breakfast counter",
+          "hall": "Dining room facing the garden"
+        }
+      }
     },
     "rooms": {
       "suite01": {
@@ -105,21 +119,11 @@
   },
   "googleReviews": {
     "eyebrow": "Our Google profile",
-    "title": "Find us on Google",
+    "title": "Find us\non Google",
     "viewOnMaps": "View on Google Maps",
     "leaveReview": "Review us on Google",
     "mapTitle": "Map of Pousada Recanto do Park",
-    "getDirections": "Get directions",
-    "reviewCount": "{count, plural, =1 {# review on Google} other {# reviews on Google}}",
-    "seeReviews": "See reviews"
-  },
-  "testimonials": {
-    "eyebrow": "Guests who stayed here",
-    "title": "What our guests say",
-    "source": "on Google",
-    "placeholderTitle": "Leave your review!",
-    "placeholderBody": "Have you stayed with us? Tell us how it went.",
-    "placeholderCta": "Review on Google"
+    "getDirections": "Get directions"
   },
   "ctaFinal": {
     "title": "Ready for your next adventure?",
@@ -133,7 +137,6 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "description": "Guesthouse in Penha, Santa Catarina, five minutes from Beto Carrero World and close to Gravatá Beach.",
     "navTitle": "Explore",
     "stayTitle": "Your stay",
     "paymentMethods": "Accepted payment methods",
@@ -386,6 +389,10 @@
     }
   },
   "instagram": {
-    "invite": "Follow the guesthouse on Instagram"
+    "invite": "Follow the guesthouse on Instagram",
+    "follow": "Follow",
+    "location": "Penha, Santa Catarina",
+    "caption": "Arriving at night? The facade lights up to welcome you. ✨",
+    "cta": "See profile on Instagram"
   }
 }

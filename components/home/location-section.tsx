@@ -7,9 +7,10 @@ import { Link } from "@/i18n/navigation";
 import { photos, gravataCarousel } from "@/lib/data/images";
 import { useReveal } from "@/lib/animations/use-reveal";
 import { gsap, useGSAP } from "@/lib/animations/gsap";
-import { SectionBackdrop } from "@/components/home/section-backdrop";
-import { SectionWave } from "@/components/home/section-wave";
 import { PhotoCarousel } from "@/components/ui/photo-carousel";
+
+const linkClass =
+  "mt-auto inline-flex min-h-11 items-center gap-2 pt-4 text-sm font-medium text-gold transition-colors hover:text-gold/80";
 
 function DestinationCard({
   image,
@@ -24,13 +25,13 @@ function DestinationCard({
   distance: string;
   title: string;
   description: string;
-  link?: { href: string; label: string };
+  link?: { href: string; label: string; external?: boolean };
 }) {
   return (
     <div
       data-reveal
       data-destination
-      className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm"
+      className="group flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm"
     >
       <div className="relative aspect-16/10 overflow-hidden">
         <Image
@@ -46,26 +47,36 @@ function DestinationCard({
           {distance}
         </span>
       </div>
-      <div className="p-6">
+      <div className="flex flex-1 flex-col p-6 sm:p-8">
         <h3 className="font-display text-xl leading-tight sm:text-2xl">
           {title}
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-navy-foreground/70">
           {description}
         </p>
-        {link && (
-          <Link
-            href={link.href}
-            className="mt-4 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gold transition-colors hover:text-gold/80"
-          >
-            {link.label}
-            <ArrowRight className="size-4" />
-          </Link>
-        )}
+        {link &&
+          (link.external ? (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkClass}
+            >
+              {link.label}
+              <ArrowRight className="size-4" />
+            </a>
+          ) : (
+            <Link href={link.href} className={linkClass}>
+              {link.label}
+              <ArrowRight className="size-4" />
+            </Link>
+          ))}
       </div>
     </div>
   );
 }
+
+const gravataMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Praia do Gravatá, Penha - SC")}`;
 
 export function LocationSection() {
   const t = useTranslations("location");
@@ -75,43 +86,47 @@ export function LocationSection() {
     () => {
       gsap
         .matchMedia()
-        .add("(min-width: 1024px) and (prefers-reduced-motion: no-preference)", () => {
-          gsap.utils.toArray<HTMLElement>("[data-destination]").forEach((card, index) => {
-            const side = index === 0 ? -1 : 1;
-            gsap.fromTo(
-              card,
-              { xPercent: side * 14, rotate: side * 2.5 },
-              {
-                xPercent: 0,
-                rotate: 0,
-                ease: "none",
-                scrollTrigger: { trigger: card, start: "top bottom", end: "top 35%", scrub: 0.8 },
-              }
-            );
-          });
-        });
+        .add(
+          "(min-width: 1024px) and (prefers-reduced-motion: no-preference)",
+          () => {
+            gsap.utils
+              .toArray<HTMLElement>("[data-destination]")
+              .forEach((card, index) => {
+                const side = index === 0 ? -1 : 1;
+                gsap.fromTo(
+                  card,
+                  { xPercent: side * 14, rotate: side * 2.5 },
+                  {
+                    xPercent: 0,
+                    rotate: 0,
+                    ease: "none",
+                    scrollTrigger: {
+                      trigger: card,
+                      start: "top bottom",
+                      end: "top 70%",
+                      scrub: 0.8,
+                    },
+                  },
+                );
+              });
+          },
+        );
     },
-    { scope }
+    { scope },
   );
 
   return (
     <section
       ref={scope}
       id="localizacao"
-      className="relative isolate overflow-hidden bg-navy py-24 text-navy-foreground md:py-36"
+      className="relative isolate overflow-hidden bg-navy py-24 text-navy-foreground md:py-32"
     >
-      <SectionBackdrop variant="map" />
-      <SectionWave position="top" surface="surface-clay" />
-      <SectionWave position="bottom" surface="surface-cream" />
-
       <div className="relative z-20 mx-auto max-w-7xl px-6">
         <div data-reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm uppercase tracking-[0.35em] text-gold">
             {t("eyebrow")}
           </p>
-          <h2 className="heading-section mt-4">
-            {t("title")}
-          </h2>
+          <h2 className="heading-section mt-4">{t("title")}</h2>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 md:gap-8">
@@ -129,14 +144,19 @@ export function LocationSection() {
             distance={t("beachDistance")}
             title={t("beachTitle")}
             description={t("beachDescription")}
+            link={{
+              href: gravataMapsUrl,
+              label: t("beachLink"),
+              external: true,
+            }}
           />
         </div>
 
-        <div data-reveal className="mt-16">
-          <h3 className="font-display text-2xl sm:text-3xl">
+        <div data-reveal className="mt-20 md:mt-24">
+          <h3 className="text-center font-display text-2xl sm:text-3xl">
             {t("carouselTitle")}
           </h3>
-          <p className="mt-2 max-w-xl text-sm leading-relaxed text-navy-foreground/70 sm:text-base">
+          <p className="mx-auto mt-2 max-w-xl text-center text-sm leading-relaxed text-navy-foreground/70 sm:text-base">
             {t("carouselSubtitle")}
           </p>
           <div className="mt-6">

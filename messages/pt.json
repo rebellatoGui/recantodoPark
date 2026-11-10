@@ -3,8 +3,6 @@
     "siteName": "Pousada Recanto do Park",
     "titleHome": "Pousada Recanto do Park | Penha, Santa Catarina",
     "descriptionHome": "Pousada em Penha/SC, a 5 minutos do Beto Carrero World e perto da Praia do Gravatá. Reserve sua estadia.",
-    "titleAccommodations": "Acomodações | Pousada Recanto do Park",
-    "descriptionAccommodations": "Conheça os quartos e suítes da Pousada Recanto do Park, em Penha/SC.",
     "titleTickets": "Ingressos Beto Carrero World | Pousada Recanto do Park",
     "descriptionTickets": "Compre seus ingressos do Beto Carrero World direto com a Pousada Recanto do Park, em Penha/SC, a 5 minutos do parque."
   },
@@ -19,24 +17,21 @@
   },
   "hero": {
     "eyebrow": "Penha, Santa Catarina",
-    "title": "Seu refúgio entre o parque e o mar",
+    "title": "Seu refúgio|entre\no|parque|e o mar!",
     "subtitle": "A 5 minutos do Beto Carrero World e pertinho da Praia do Gravatá. Conforto para a família toda.",
     "ctaPrimary": "Reservar agora",
     "ctaWhatsapp": "Falar no WhatsApp",
     "videoLabel": "Vista aérea do Beto Carrero World, a poucos minutos da pousada"
   },
   "essentialInfo": {
-    "eyebrow": "Informações essenciais",
-    "title": "O que você precisa saber antes de chegar",
-    "subtitle": "Um resumo rápido pra organizar sua viagem até a Pousada Recanto do Park.",
     "receptionLabel": "Recepção",
     "petLabel": "Pet-Friendly",
     "petValue": "Consultar previamente"
   },
   "about": {
     "eyebrow": "Sobre nós",
-    "title": "Descanso e aventura, lado a lado",
-    "body": "A Pousada Recanto do Park fica a 5 minutos do Beto Carrero World e perto da Praia do Gravatá. As suítes são confortáveis, tem café da manhã e estacionamento próprio, e quem atende conhece a região de verdade.",
+    "title": "Lado a lado",
+    "body": "O Beto Carrero World e a Praia do Gravatá ficam a poucos minutos um do outro, e a pousada está bem no meio. De manhã, parque; à tarde, mar. Na volta, suíte confortável, café da manhã caprichado e estacionamento próprio.",
     "stats": {
       "distanceValue": "5 min",
       "distanceLabel": "Do Beto Carrero World"
@@ -54,7 +49,8 @@
     "beachDescription": "Costão de pedras, mar aberto e areia larga. A praia é pet-friendly, então dá para levar o cachorro.",
     "carouselTitle": "A praia que te espera",
     "carouselSubtitle": "Um pouco do que você encontra pertinho da pousada, na Praia do Gravatá.",
-    "parkLink": "Comprar ingressos com a pousada"
+    "parkLink": "Comprar ingressos com a pousada",
+    "beachLink": "Ver a praia no mapa"
   },
   "amenities": {
     "eyebrow": "Serviços",
@@ -75,24 +71,42 @@
   "accommodationsPreview": {
     "eyebrow": "Onde você vai ficar",
     "title": "Conforto para a sua viagem",
-    "ctaAll": "Acomodações"
+    "text": "Quartos claros e arejados, café da manhã caprichado todos os dias e um refeitório de frente para o verde. Tudo pensado para você descansar entre um dia de parque e outro de praia.",
+    "ctaAll": "Ver acomodações",
+    "prev": "Foto anterior",
+    "next": "Próxima foto",
+    "photos": {
+      "quarto1": "Suíte com cama de casal",
+      "quartoJanela": "Quarto com vista para o morro",
+      "quartoTriplo": "Quarto para a família toda",
+      "quartoLilas": "Casal e solteiro no mesmo quarto",
+      "banheiro": "Banheiro privativo",
+      "cafeBancada": "Buffet com frutas, pães e bolos",
+      "refeitorioMesas": "Refeitório de frente para o jardim",
+      "refeitorio": "Espaço amplo para as refeições"
+    }
   },
   "accommodations": {
-    "hero": {
-      "eyebrow": "Nossas acomodações",
-      "title": "Conforto pensado para sua estadia",
-      "subtitle": "Suítes equipadas com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi, a poucos minutos do Beto Carrero World."
-    },
     "bookRoom": "Reservar este quarto",
     "capacityLabel": "Hóspedes",
-    "roomLabel": "Quarto",
     "detail": {
-      "backToRooms": "Voltar para acomodações",
+      "backToRooms": "Voltar para o início",
       "sizeLabel": "Tamanho",
       "bedsLabel": "Camas",
       "amenitiesLabel": "O que este quarto oferece",
       "galleryHint": "Toque na foto para ampliar",
-      "nearbyTitle": "A poucos minutos de tudo"
+      "bookEyebrow": "Reserve direto com a pousada",
+      "breakfast": {
+        "badge": "Incluso na diária",
+        "title": "Café da manhã incluso",
+        "text": "Todas as manhãs, um buffet com frutas, pães, bolos, sucos e café, servido no refeitório de frente para o jardim. É só descer e começar o dia com energia antes do parque ou da praia.",
+        "photos": {
+          "buffet": "Buffet do café da manhã com frutas, bolos e sucos",
+          "tables": "Mesas do refeitório postas para o café",
+          "counter": "Bancada do café da manhã",
+          "hall": "Refeitório com vista para o jardim"
+        }
+      }
     },
     "rooms": {
       "suite01": {
@@ -105,21 +119,11 @@
   },
   "googleReviews": {
     "eyebrow": "Nosso perfil no Google",
-    "title": "Encontre a gente no Google",
+    "title": "Encontre\na gente no\nGoogle",
     "viewOnMaps": "Ver no Google Maps",
     "leaveReview": "Avaliar no Google",
     "mapTitle": "Mapa da Pousada Recanto do Park",
-    "getDirections": "Como chegar",
-    "reviewCount": "{count, plural, =1 {# avaliação no Google} other {# avaliações no Google}}",
-    "seeReviews": "Ver avaliações"
-  },
-  "testimonials": {
-    "eyebrow": "Quem já ficou aqui",
-    "title": "O que dizem os hóspedes",
-    "source": "no Google",
-    "placeholderTitle": "Deixe sua avaliação!",
-    "placeholderBody": "Já se hospedou com a gente? Conte como foi a sua estadia.",
-    "placeholderCta": "Avaliar no Google"
+    "getDirections": "Como chegar"
   },
   "ctaFinal": {
     "title": "Pronto para sua próxima aventura?",
@@ -133,7 +137,6 @@
   },
   "footer": {
     "rights": "Todos os direitos reservados.",
-    "description": "Pousada em Penha/SC, a 5 minutos do Beto Carrero World e pertinho da Praia do Gravatá.",
     "navTitle": "Navegação",
     "stayTitle": "Sua estadia",
     "paymentMethods": "Formas de pagamento aceitas",
@@ -386,6 +389,10 @@
     }
   },
   "instagram": {
-    "invite": "Acompanhe a pousada no Instagram"
+    "invite": "Acompanhe a pousada no Instagram",
+    "follow": "Seguir",
+    "location": "Penha, Santa Catarina",
+    "caption": "Chegando à noite? A fachada acende para te receber. ✨",
+    "cta": "Ver perfil no Instagram"
   }
 }

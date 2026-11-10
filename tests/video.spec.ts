@@ -38,17 +38,17 @@ test("hero content never paints in its final state before the entrance animation
   await page.addInitScript(() => {
     document.addEventListener("DOMContentLoaded", () => {
       const word = document.querySelector("[data-hero-word]");
-      const seal = document.querySelector("[data-hero-seal]");
+      const eyebrow = document.querySelector("[data-hero-eyebrow]");
       (window as unknown as { __firstPaint: unknown }).__firstPaint = {
         word: word && getComputedStyle(word).transform,
-        seal: seal && getComputedStyle(seal).opacity,
+        eyebrow: eyebrow && getComputedStyle(eyebrow).opacity,
       };
     });
   });
   await page.goto("/");
-  const first = await page.evaluate(() => (window as unknown as { __firstPaint: { word: string; seal: string } }).__firstPaint);
+  const first = await page.evaluate(() => (window as unknown as { __firstPaint: { word: string; eyebrow: string } }).__firstPaint);
   expect(first.word).not.toBe("none");
-  expect(first.seal).toBe("0");
+  expect(first.eyebrow).toBe("0");
 });
 
 test("hero video always plays at normal speed (smoothness comes from opacity only)", async ({ page }) => {
@@ -73,7 +73,7 @@ test.describe("without JavaScript", () => {
 
   test("hero content is visible immediately", async ({ page }) => {
     await page.goto("/");
-    await expect(page.locator("[data-hero-seal]")).toHaveCSS("opacity", "1");
+    await expect(page.locator("[data-hero-eyebrow]")).toHaveCSS("opacity", "1");
     await expect(page.locator("[data-hero-subtitle]")).toHaveCSS("opacity", "1");
     await expect(page.locator("[data-hero-word]").first()).toHaveCSS("transform", "none");
   });

@@ -9,17 +9,15 @@ const deTerceiros = (texto: string) =>
 
 const routes = [
   "/",
-  "/acomodacoes",
   "/acomodacoes/suite-01",
   "/ingressos-beto-carrero",
   "/politica-de-privacidade",
   "/termos-de-uso",
   "/en",
-  "/en/acomodacoes",
   "/en/acomodacoes/suite-01",
   "/en/ingressos-beto-carrero",
   "/es",
-  "/es/acomodacoes",
+  "/es/acomodacoes/suite-01",
   "/es/ingressos-beto-carrero",
 ];
 

@@ -94,6 +94,10 @@ export function AboutSection() {
       className="relative isolate overflow-hidden py-20 text-navy-foreground md:py-28"
     >
       <SectionBackdrop variant="park" />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-24 bg-linear-to-t from-navy to-transparent"
+      />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-2 items-center gap-5 lg:grid-cols-[1fr_1.25fr_1fr] lg:gap-10">
@@ -102,7 +106,7 @@ export function AboutSection() {
           </div>
 
           <div className="order-first col-span-2 text-center lg:order-2 lg:col-span-1">
-            <h2 className="heading-section">
+            <h2 className="heading-section whitespace-nowrap">
               {lines.map((words, l) => (
                 <span key={l} className="block">
                   {words.map((word, i) => (

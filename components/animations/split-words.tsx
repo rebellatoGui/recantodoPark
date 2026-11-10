@@ -1,19 +1,28 @@
 import { Fragment } from "react";
 
+// "\n" quebra a linha só no desktop (lg+); "|" quebra só abaixo de lg.
 export function SplitWords({ text, attr = "data-word" }: { text: string; attr?: string }) {
-  const words = text.split(" ");
+  const tokens = text.split(/([ \n|])/).filter(Boolean);
   return (
     <>
-      {words.map((word, index) => (
-        <Fragment key={`${word}-${index}`}>
-          <span className="inline-block overflow-hidden pb-[0.08em] align-bottom">
+      {tokens.map((token, index) => {
+        if (token === " ") return <Fragment key={index}> </Fragment>;
+        if (token === "\n" || token === "|") {
+          return (
+            <Fragment key={index}>
+              {" "}
+              <br className={token === "\n" ? "hidden lg:block" : "lg:hidden"} />
+            </Fragment>
+          );
+        }
+        return (
+          <span key={index} className="inline-block overflow-hidden pb-[0.08em] align-bottom">
             <span className="inline-block" {...{ [attr]: "" }}>
-              {word}
+              {token}
             </span>
           </span>
-          {index < words.length - 1 && " "}
-        </Fragment>
-      ))}
+        );
+      })}
     </>
   );
 }

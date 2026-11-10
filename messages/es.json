@@ -3,8 +3,6 @@
     "siteName": "Pousada Recanto do Park",
     "titleHome": "Pousada Recanto do Park | Penha, Santa Catarina",
     "descriptionHome": "Posada en Penha, Brasil, a 5 minutos de Beto Carrero World y cerca de la Playa de Gravatá. Reserva tu estadía.",
-    "titleAccommodations": "Habitaciones | Pousada Recanto do Park",
-    "descriptionAccommodations": "Conoce las habitaciones y suites de la Pousada Recanto do Park, en Penha, Brasil.",
     "titleTickets": "Entradas Beto Carrero World | Pousada Recanto do Park",
     "descriptionTickets": "Compra tus entradas de Beto Carrero World directamente con la Pousada Recanto do Park, en Penha, Brasil, a 5 minutos del parque."
   },
@@ -19,24 +17,21 @@
   },
   "hero": {
     "eyebrow": "Penha, Santa Catarina",
-    "title": "Tu refugio entre el parque y el mar",
+    "title": "¡Tu refugio|entre\nel|parque|y el mar!",
     "subtitle": "A 5 minutos de Beto Carrero World y muy cerca de la Playa de Gravatá. Confort para toda la familia.",
     "ctaPrimary": "Reservar ahora",
     "ctaWhatsapp": "Hablar por WhatsApp",
     "videoLabel": "Vista aérea de Beto Carrero World, a pocos minutos de la posada"
   },
   "essentialInfo": {
-    "eyebrow": "Información esencial",
-    "title": "Lo que necesitas saber antes de llegar",
-    "subtitle": "Un resumen rápido para organizar tu viaje a la Pousada Recanto do Park.",
     "receptionLabel": "Recepción",
     "petLabel": "Pet-Friendly",
     "petValue": "Consultar previamente"
   },
   "about": {
     "eyebrow": "Sobre nosotros",
-    "title": "Descanso y aventura, uno al lado del otro",
-    "body": "La Pousada Recanto do Park está a 5 minutos de Beto Carrero World y cerca de la Playa de Gravatá. Las suites son cómodas, hay desayuno y estacionamiento propio, y quien te atiende conoce bien la región.",
+    "title": "Lado a lado",
+    "body": "Beto Carrero World y la Playa de Gravatá están a pocos minutos una de otra, y la posada queda justo en el medio. Por la mañana, parque; por la tarde, mar. Al volver, suite cómoda, desayuno abundante y estacionamiento propio.",
     "stats": {
       "distanceValue": "5 min",
       "distanceLabel": "De Beto Carrero World"
@@ -54,7 +49,8 @@
     "beachDescription": "Rocas, mar abierto y arena amplia. La playa es pet-friendly, así que puedes llevar a tu perro.",
     "carouselTitle": "La playa que te espera",
     "carouselSubtitle": "Un poco de lo que encontrarás cerca de la posada, en la Playa de Gravatá.",
-    "parkLink": "Comprar entradas con la posada"
+    "parkLink": "Comprar entradas con la posada",
+    "beachLink": "Ver la playa en el mapa"
   },
   "amenities": {
     "eyebrow": "Servicios",
@@ -75,24 +71,42 @@
   "accommodationsPreview": {
     "eyebrow": "Dónde te vas a hospedar",
     "title": "Comodidad para tu viaje",
-    "ctaAll": "Alojamientos"
+    "text": "Habitaciones luminosas y aireadas, un desayuno abundante todos los días y un comedor frente al jardín. Todo pensado para que descanses entre un día de parque y otro de playa.",
+    "ctaAll": "Ver alojamientos",
+    "prev": "Foto anterior",
+    "next": "Foto siguiente",
+    "photos": {
+      "quarto1": "Suite con cama doble",
+      "quartoJanela": "Habitación con vista al cerro",
+      "quartoTriplo": "Habitación para toda la familia",
+      "quartoLilas": "Cama doble y simple en la misma habitación",
+      "banheiro": "Baño privado",
+      "cafeBancada": "Buffet con frutas, panes y tortas",
+      "refeitorioMesas": "Comedor frente al jardín",
+      "refeitorio": "Amplio espacio para las comidas"
+    }
   },
   "accommodations": {
-    "hero": {
-      "eyebrow": "Nuestras habitaciones",
-      "title": "Confort pensado para tu estadía",
-      "subtitle": "Suites equipadas con baño privado, aire acondicionado, TV, frigobar y Wi-Fi, a pocos minutos de Beto Carrero World."
-    },
     "bookRoom": "Reservar esta habitación",
     "capacityLabel": "Huéspedes",
-    "roomLabel": "Habitación",
     "detail": {
-      "backToRooms": "Volver a las habitaciones",
+      "backToRooms": "Volver al inicio",
       "sizeLabel": "Tamaño",
       "bedsLabel": "Camas",
       "amenitiesLabel": "Qué ofrece esta habitación",
       "galleryHint": "Toca la foto para ampliar",
-      "nearbyTitle": "A minutos de todo"
+      "bookEyebrow": "Reserva directo con la posada",
+      "breakfast": {
+        "badge": "Incluido en la tarifa",
+        "title": "Desayuno incluido",
+        "text": "Todas las mañanas, un buffet con frutas, panes, tortas, jugos y café, servido en el comedor frente al jardín. Solo tienes que bajar y empezar el día con energía antes del parque o la playa.",
+        "photos": {
+          "buffet": "Buffet de desayuno con frutas, tortas y jugos",
+          "tables": "Mesas del comedor listas para el desayuno",
+          "counter": "Mesada del desayuno",
+          "hall": "Comedor con vista al jardín"
+        }
+      }
     },
     "rooms": {
       "suite01": {
@@ -105,21 +119,11 @@
   },
   "googleReviews": {
     "eyebrow": "Nuestro perfil en Google",
-    "title": "Encuéntranos en Google",
+    "title": "Encuéntranos\nen Google",
     "viewOnMaps": "Ver en Google Maps",
     "leaveReview": "Reseñar en Google",
     "mapTitle": "Mapa de Pousada Recanto do Park",
-    "getDirections": "Cómo llegar",
-    "reviewCount": "{count, plural, =1 {# reseña en Google} other {# reseñas en Google}}",
-    "seeReviews": "Ver reseñas"
-  },
-  "testimonials": {
-    "eyebrow": "Quienes ya se hospedaron",
-    "title": "Lo que dicen los huéspedes",
-    "source": "en Google",
-    "placeholderTitle": "¡Deja tu reseña!",
-    "placeholderBody": "¿Ya te hospedaste con nosotros? Cuéntanos cómo fue tu estadía.",
-    "placeholderCta": "Reseñar en Google"
+    "getDirections": "Cómo llegar"
   },
   "ctaFinal": {
     "title": "¿Listo para tu próxima aventura?",
@@ -133,7 +137,6 @@
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
-    "description": "Posada en Penha, Santa Catarina, a 5 minutos de Beto Carrero World y muy cerca de la Playa de Gravatá.",
     "navTitle": "Navegación",
     "stayTitle": "Tu estadía",
     "paymentMethods": "Formas de pago aceptadas",
@@ -386,6 +389,10 @@
     }
   },
   "instagram": {
-    "invite": "Sigue la posada en Instagram"
+    "invite": "Sigue la posada en Instagram",
+    "follow": "Seguir",
+    "location": "Penha, Santa Catarina",
+    "caption": "¿Llegas de noche? La fachada se ilumina para recibirte. ✨",
+    "cta": "Ver perfil en Instagram"
   }
 }

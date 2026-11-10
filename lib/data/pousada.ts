@@ -68,7 +68,7 @@ export const amenities: {
   icon: LucideIcon;
   image?: string;
 }[] = [
-  { id: "breakfast", icon: Coffee, image: amenityStock.breakfast },
+  { id: "breakfast", icon: Coffee, image: photos.cafeBuffet },
   { id: "parking", icon: Car, image: photos.estacionamento },
   { id: "ac", icon: Snowflake, image: amenityStock.ac },
   { id: "privateBathroom", icon: Bath, image: photos.banheiro1 },
@@ -80,7 +80,7 @@ export const amenities: {
 ];
 
 export const showcaseAmenities = amenities.filter(
-  ({ id }) => id !== "privateBathroom",
+  ({ id }) => !["privateBathroom", "wifi", "tv"].includes(id),
 );
 
 const ROOM_AMENITY_IDS: AmenityId[] = [
@@ -104,7 +104,13 @@ export const rooms: {
   {
     id: "suite01",
     slug: "suite-01",
-    images: [photos.quarto1, photos.quarto2, photos.banheiro1],
+    images: [
+      photos.quarto1,
+      photos.quartoJanela,
+      photos.quartoTriplo,
+      photos.quartoLilas,
+      photos.banheiro1,
+    ],
     amenityIds: ROOM_AMENITY_IDS,
   },
 ];
@@ -112,21 +118,3 @@ export const rooms: {
 export function getRoomBySlug(slug: string) {
   return rooms.find((room) => room.slug === slug);
 }
-
-export const googleRating = {
-  value: 5,
-  count: 1,
-};
-
-export type GoogleReview = {
-  id: string;
-  author: string;
-  rating: number;
-};
-
-export const googleReviews: GoogleReview[] = [
-  { id: "ariane-rebellato", author: "Ariane Rebellato", rating: 5 },
-];
-
-export const TESTIMONIAL_SLOTS = 3;
-

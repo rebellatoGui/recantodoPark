@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Figtree } from "next/font/google";
+import { Archivo, Figtree } from "next/font/google";
 import Script from "next/script";
 import { siteUrl } from "@/lib/seo/site";
 import "./globals.css";
@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   icons: {
     icon: [
-      { url: "/brand/favicon.ico" },
-      { url: "/brand/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/brand/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/brand/favicon.ico?v=2" },
+      { url: "/brand/favicon-16x16.png?v=2", sizes: "16x16", type: "image/png" },
+      { url: "/brand/favicon-32x32.png?v=2", sizes: "32x32", type: "image/png" },
     ],
-    apple: [{ url: "/brand/apple-touch-icon.png", sizes: "180x180" }],
+    apple: [{ url: "/brand/apple-touch-icon.png?v=2", sizes: "180x180" }],
   },
   manifest: "/brand/site.webmanifest",
 };
@@ -25,10 +25,10 @@ const figtree = Figtree({
   subsets: ["latin"],
 });
 
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage",
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
-  axes: ["wdth", "opsz"],
+  axes: ["wdth"],
 });
 
 export default function RootLayout({
@@ -40,7 +40,7 @@ export default function RootLayout({
     <html
       lang="pt"
       suppressHydrationWarning
-      className={`${figtree.variable} ${bricolage.variable} antialiased`}
+      className={`${figtree.variable} ${archivo.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col bg-background text-foreground font-sans">
         {loadGtm && (

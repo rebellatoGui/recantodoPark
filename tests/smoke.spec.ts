@@ -8,13 +8,18 @@ test("home renders in Portuguese by default", async ({ page }) => {
   ).toBeVisible();
 });
 
-test("navigates from home to acomodações", async ({ page }) => {
+test("accommodations link opens the suite page", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("link", { name: "Acomodações" }).first().click();
-  await expect(page).toHaveURL(/\/acomodacoes/);
+  await expect(page).toHaveURL(/\/acomodacoes\/suite-01$/);
   await expect(
-    page.getByRole("heading", { name: /conforto pensado para sua estadia/i })
+    page.getByRole("heading", { level: 1, name: /suíte standard/i })
   ).toBeVisible();
+});
+
+test("old accommodations list redirects to the suite", async ({ page }) => {
+  await page.goto("/en/acomodacoes");
+  await expect(page).toHaveURL(/\/en\/acomodacoes\/suite-01$/);
 });
 
 test("switches language to English", async ({ page }) => {

@@ -14,7 +14,7 @@ export function AmenitiesSection() {
     <section
       id="servicos"
       ref={scope}
-      className="relative isolate scroll-mt-20 overflow-hidden bg-surface-cream px-6 py-20 md:py-32"
+      className="relative isolate scroll-mt-20 overflow-hidden bg-[color-mix(in_oklch,var(--surface-clay)_40%,var(--surface-cream))] px-6 py-20 md:py-28"
     >
       <SectionBackdrop variant="coaster" />
       <div className="mx-auto max-w-6xl">
@@ -27,19 +27,19 @@ export function AmenitiesSection() {
           </h2>
         </div>
 
-        <ul className="mt-12 grid grid-cols-2 gap-3 sm:gap-5 md:mt-14 lg:grid-cols-4">
+        <ul className="mt-12 grid grid-cols-2 gap-3 sm:gap-5 md:mt-14 lg:grid-cols-3">
           {showcaseAmenities.map(({ id, icon: Icon, image }) => (
             <li
               key={id}
               data-reveal
-              className="group relative isolate aspect-4/5 overflow-hidden lg:aspect-square rounded-2xl bg-navy shadow-sm sm:rounded-3xl"
+              className="group relative isolate aspect-4/5 overflow-hidden lg:aspect-4/3 rounded-2xl bg-navy shadow-sm sm:rounded-3xl"
             >
               {image && (
                 <Image
                   src={image}
                   alt=""
                   fill
-                  sizes="(min-width: 1024px) 270px, 45vw"
+                  sizes="(min-width: 1024px) 370px, 45vw"
                   className="-z-10 object-cover transition-transform duration-700 motion-safe:group-hover:scale-105"
                 />
               )}
